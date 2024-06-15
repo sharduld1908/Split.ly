@@ -1,37 +1,29 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import { Tabs } from "expo-router"
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+export default () => {
+    return (
+        <Tabs screenOptions={({route}) => ({
+            tabBarIcon: ({color,size}) => {
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+                if (route.name === 'Home') {
+                    return <MaterialIcons name="home" size={27} color="black" />;
+                } else if (route.name === 'Groups') {
+                    return <MaterialIcons name="groups" size={27} color="black" />;
+                } else if (route.name === 'History') {
+                    return <MaterialIcons name="history" size={27} color="black" />;
+                } else if (route.name === 'Reports') {
+                    return <MaterialCommunityIcons name="file-chart" size={27} color="black" />
+                }
 
-  return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
-  );
+                return <></>;
+            }
+        })}>
+            <Tabs.Screen name="Home" options={{headerShown: false}}/>
+            <Tabs.Screen name="Groups" options={{headerShown: false}}/>
+            <Tabs.Screen name="History" options={{headerShown: false}}/>
+            <Tabs.Screen name="Reports" options={{headerShown: false}}/>
+        </Tabs>
+    )
 }
