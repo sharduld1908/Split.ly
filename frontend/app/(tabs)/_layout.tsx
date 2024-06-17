@@ -1,29 +1,35 @@
-import { Tabs } from "expo-router"
+import {Tabs} from "expo-router"
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 export default () => {
     return (
-        <Tabs screenOptions={({route}) => ({
-            tabBarIcon: ({color,size}) => {
-                if (route.name === 'Home') {
-                    return <MaterialIcons name="home" size={size} color={color} />;
-                } else if (route.name === 'Groups') {
-                    return <MaterialIcons name="groups" size={size} color={color} />;
-                } else if (route.name === 'History') {
-                    return <MaterialIcons name="history" size={size} color={color} />;
-                } else if (route.name === 'Reports') {
-                    return <MaterialCommunityIcons name="file-chart" size={size} color={color} />
-                }
-
-                return <></>;
-            }
-        })}
-        >
-            <Tabs.Screen name="Home" options={{headerShown: false}}/>
-            <Tabs.Screen name="Groups" options={{headerShown: false}}/>
-            <Tabs.Screen name="History" options={{headerShown: false}}/>
-            <Tabs.Screen name="Reports" options={{headerShown: false}}/>
+        <Tabs screenOptions={{
+            tabBarActiveTintColor: 'green',
+            tabBarInactiveTintColor: 'black',
+            tabBarLabelStyle: {fontSize: 13},
+            tabBarIconStyle: {fontSize:50},
+        }}>
+            <Tabs.Screen name="Home" options={{
+                title: "Home",
+                tabBarIcon: ({color, size}) => <MaterialIcons name="home" size={size} color={color}/>,
+                headerShown: false
+            }}/>
+            <Tabs.Screen name="Groups" options={{
+                title: "Groups",
+                tabBarIcon: ({color, size}) => <MaterialIcons name="groups" size={size} color={color}/>,
+                headerShown: false
+            }}/>
+            <Tabs.Screen name="History" options={{
+                title: "History",
+                tabBarIcon: ({color, size}) => <MaterialIcons name="history" size={size} color={color}/>,
+                headerShown: false
+            }}/>
+            <Tabs.Screen name="Reports" options={{
+                title: "Reports",
+                tabBarIcon: ({color, size}) => <MaterialCommunityIcons name="file-chart" size={size} color={color}/>,
+                headerShown: false
+            }}/>
         </Tabs>
     )
 }
