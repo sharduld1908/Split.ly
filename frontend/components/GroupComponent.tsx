@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { Entypo } from '@expo/vector-icons';
 import GroupCard from './GroupCard';
 
 interface GroupsComponentProps {
@@ -11,7 +12,7 @@ const GroupComponent: React.FC<GroupsComponentProps> = () => {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.TitleContainer}>
-        <Text style={styles.header}>Groups:</Text>
+        <Text style={styles.header}>Groups <Entypo name="chevron-down" size={34} color="black" /></Text>
         <AntDesign name="pluscircleo" size={26} color="black" style={{padding: 5, /*backgroundColor: 'yellow'*/}} />
       </View>
       <View style={styles.ScrollContainer}>

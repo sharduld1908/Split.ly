@@ -11,15 +11,16 @@ export default function RootLayout() {
   return (
     <Stack>
       <Stack.Screen name = "(tabs)" options = {{
-          headerStyle: {backgroundColor: "#FAFAFC"},
+          headerShown: false
+          /*headerStyle: {backgroundColor: "#FAFAFC"},
           headerShadowVisible: false,
           headerLeft: () => (
-              <Text style={{fontSize: 15}}>Hi, Player 1</Text>
+              <Text style={{fontSize: 30}}>Hi, Player 1</Text>
           ),
           headerRight: () => (
               <ProfilePicBtn iconUrl={{}} dimension='100%' handlePress={()=>{}} />
           ),
-          headerTitle: ""
+          headerTitle: ""*/
         }} 
       />
     </Stack>
