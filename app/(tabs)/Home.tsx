@@ -1,10 +1,11 @@
-import { View, Text } from 'react-native'
+import GroupComponent from '@/components/GroupComponent'
 import React from 'react'
+import { View } from 'react-native'
 
 const Home = () => {
   return (
-    <View>
-      <Text>Home</Text>
+    <View style={{ flex: 1, backgroundColor: 'red' }}>
+		<GroupComponent></GroupComponent>
     </View>
   )
 }
