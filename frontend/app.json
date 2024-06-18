@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "SplitX",
-    "slug": "SplitX",
-    "version": "1.0.0",
+    "name": "split.ly",
+    "slug": "split_ly",
+    "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -10,9 +10,17 @@
     "ios": {
       "supportsTablet": true
     },
+    "splash": {
+      "ios": {
+        "image": "./assets/images/splash.png"
+      },
+      "image": "./assets/images/splash.png",
+      "backgroundColor": "#E0F1F1",
+      "resizeMode": "contain"
+    },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       }
     },
