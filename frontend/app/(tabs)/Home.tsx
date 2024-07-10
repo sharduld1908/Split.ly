@@ -1,9 +1,10 @@
 import GroupComponent from '@/components/GroupComponent'
 import React, {useCallback} from 'react'
-import {SafeAreaView, View, StyleSheet, Text, Image, Button, Platform} from 'react-native'
+import {SafeAreaView, View, StyleSheet, Text,TouchableOpacity, Image, Button, Platform} from 'react-native'
 import {StatusBar} from 'expo-status-bar';
 import * as Updates from "expo-updates";
 import ProfilePicBtn from "@/components/header/ProfilePicBtn";
+import {Ionicons} from "@expo/vector-icons";
 
 const Home = () => {
     return (
@@ -16,6 +17,9 @@ const Home = () => {
                     }}/>
                 </View>
                 <GroupComponent></GroupComponent>
+                <TouchableOpacity style={styles.floatingButton}>
+                    <Ionicons name="add-circle" size={80} color="green"/>
+                </TouchableOpacity>
             </SafeAreaView>
         </>
     )
@@ -41,7 +45,7 @@ const styles = StyleSheet.create({
     },
     floatingButton: {
         position: 'absolute', // Position absolutely within the parent container
-        bottom: 60, // Distance from bottom
+        bottom: 20, // Distance from bottom
         right: 0, // Distance from right
         alignItems: 'center', // Center the icon horizontally and vertically
         justifyContent: 'center',

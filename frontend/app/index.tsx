@@ -1,5 +1,4 @@
-/*
-import {useRouter} from "expo-router";
+/*import {useRouter} from "expo-router";
 import {Button, View, Text} from "react-native";
 import useGoogleAuth from './googleAuth';
 import {useState} from "react";
@@ -39,8 +38,8 @@ export default function Index() {
             )}
         </View>
     );
-};
-*/
+};*/
+
 
 
 import {Redirect} from "expo-router";
