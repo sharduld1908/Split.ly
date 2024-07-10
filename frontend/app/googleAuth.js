@@ -1,3 +1,4 @@
+/*
 import { auth } from '@/firebaseConfig';
 import * as Google from 'expo-auth-session/providers/google';
 import { CLIENT_ID } from '@env';
@@ -25,4 +26,4 @@ const useGoogleAuth = () => {
     return { handleGoogleAuth };
 };
 
-export default useGoogleAuth;
+export default useGoogleAuth;*/
